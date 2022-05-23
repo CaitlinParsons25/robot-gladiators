@@ -120,8 +120,18 @@ var shop = function() {
     }
 };
 
+var getPlayerName = function() {
+    const playerName = window.prompt("What is your robot's name?");
+    if (playerName) {
+	return playerName
+    } else {
+	getPlayerName()
+    }
+}
+
 var playerInfo = {
-    name: window.prompt("What is your robot's name?"),
+    name:
+    getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
